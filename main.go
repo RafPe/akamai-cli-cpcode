@@ -14,12 +14,8 @@ import (
 var (
 	apiClient                                *edgegrid.Client
 	apiClientOpts                            *edgegrid.ClientOptions
-	homeDir, output                          string
+	homeDir, output, version                 string
 	groupID, contractID, CPcodeName, product string
-)
-
-const (
-	version = "1.0.0"
 )
 
 func main() {

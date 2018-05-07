@@ -17,6 +17,18 @@ do
   h) usage;;
   esac
 done
+# while [ "$1" != "" ]; do
+#     case $1 in
+#         -v | --version )        version=$1
+#                                 ;;
+#         -h | --help )           usage
+#                                 exit
+#                                 ;;
+#         * )                     usage
+#                                 exit 1
+#     esac
+#     shift
+# done
 
 if [ "$version" == "" ]; then
   echo "Please specify version/tag to release in format X.X.X"
