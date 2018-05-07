@@ -7,7 +7,7 @@
         "name": "cpcodes",
         "version": "1.0.0",
         "description": "CP Codes management",
-        "bin": "https://github.com/RafPe/akamai-cli-networklist/releases/download/v{{.Version}}/akamai-{{.Name}}_{{.OS}}_{{.Arch}}{{.BinSuffix}}"
+        "bin": "https://github.com/RafPe/akamai-cli-cpcodes/releases/download/v{{.Version}}/akamai-{{.Name}}_{{.OS}}_{{.Arch}}{{.BinSuffix}}"
       }
     ]
   }
