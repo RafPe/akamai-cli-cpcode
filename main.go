@@ -107,6 +107,11 @@ func main() {
 					Destination: &groupID,
 				},
 				cli.StringFlag{
+					Name:        "ProductID",
+					Usage:       "",
+					Destination: &product,
+				},
+				cli.StringFlag{
 					Name:        "CPcodeName",
 					Usage:       "",
 					Destination: &CPcodeName,

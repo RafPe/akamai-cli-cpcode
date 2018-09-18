@@ -110,6 +110,7 @@ func createCPcode(c *cli.Context) error {
 	verifyArgumentByName(c, "contractID")
 	verifyArgumentByName(c, "groupID")
 	verifyArgumentByName(c, "CPcodeName")
+	verifyArgumentByName(c, "ProductID")
 
 	newCPcode := &edgegrid.PropertyAPICPCodeNew{
 		CpcodeName: CPcodeName,
