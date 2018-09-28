@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 
-	edgegrid "github.com/RafPe/go-edgegrid"
+	common "github.com/apiheat/akamai-cli-common"
+	edgegrid "github.com/apiheat/go-edgegrid"
 	"github.com/urfave/cli"
 )
 
@@ -21,7 +22,7 @@ func listContracts(c *cli.Context) error {
 		fmt.Println(err)
 	}
 
-	outputTableContracts(contracts)
+	common.OutputJSON(contracts)
 
 	return nil
 }
@@ -40,11 +41,7 @@ func listGroups(c *cli.Context) error {
 		fmt.Println(err)
 	}
 
-	if output == "json" {
-		OutputJSON(groups)
-	} else {
-		outputTableGroups(groups)
-	}
+	common.OutputJSON(groups)
 
 	return nil
 }
@@ -57,18 +54,14 @@ func cmdListProducts(c *cli.Context) error {
 }
 
 func listProducts(c *cli.Context) error {
-	verifyArgumentByName(c, "contractID")
+	common.VerifyArgumentByName(c, "contractID")
 
 	products, _, err := apiClient.PropertyAPI.ListPropertyAPIProducts(contractID)
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	if output == "json" {
-		OutputJSON(products)
-	} else {
-		outputTableProducts(products)
-	}
+	common.OutputJSON(products)
 
 	return nil
 }
@@ -81,19 +74,15 @@ func cmdListCPcodes(c *cli.Context) error {
 }
 
 func listCPcodes(c *cli.Context) error {
-	verifyArgumentByName(c, "contractID")
-	verifyArgumentByName(c, "groupID")
+	common.VerifyArgumentByName(c, "contractID")
+	common.VerifyArgumentByName(c, "groupID")
 
 	cpcodes, _, err := apiClient.PropertyAPI.ListPropertyAPICPCodes(contractID, groupID)
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	if output == "json" {
-		OutputJSON(cpcodes)
-	} else {
-		outputTableCPCodes(cpcodes)
-	}
+	common.OutputJSON(cpcodes)
 
 	return nil
 }
@@ -107,14 +96,14 @@ func cmdCreateCPcode(c *cli.Context) error {
 }
 
 func createCPcode(c *cli.Context) error {
-	verifyArgumentByName(c, "contractID")
-	verifyArgumentByName(c, "groupID")
-	verifyArgumentByName(c, "CPcodeName")
-	verifyArgumentByName(c, "ProductID")
+	common.VerifyArgumentByName(c, "contractID")
+	common.VerifyArgumentByName(c, "groupID")
+	common.VerifyArgumentByName(c, "CPcodeName")
+	common.VerifyArgumentByName(c, "ProductID")
 
 	newCPcode := &edgegrid.PropertyAPICPCodeNew{
 		CpcodeName: CPcodeName,
-		ProductID:  product,
+		ProductID:  productID,
 	}
 
 	_, err := apiClient.PropertyAPI.NewPropertyAPICPcode(newCPcode, contractID, groupID)
