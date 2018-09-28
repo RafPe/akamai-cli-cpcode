@@ -2,12 +2,12 @@
 
 
 [[projects]]
-  branch = "master"
-  digest = "1:750a1b4c23c35798c55d4e910ba693ed5254fc2efa23dde74bc712507c40a237"
+  digest = "1:76d881212e54501b4337b4b480537ff6cd8189768fef9343d1284cb2fac71da5"
   name = "github.com/apiheat/akamai-cli-common"
   packages = ["."]
   pruneopts = "UT"
-  revision = "651299de067a963ac221bd8446eca8b2bb769433"
+  revision = "1f0a3de08e818f7d591c28671d14133b995eb670"
+  version = "v1.0.0"
 
 [[projects]]
   digest = "1:2ee5d3e6f000c5ad4e08c7d1fb689ee0fd34f1628a127ae537053f9f4f4ee28d"
