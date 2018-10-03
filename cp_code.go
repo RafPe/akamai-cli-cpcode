@@ -106,12 +106,12 @@ func createCPcode(c *cli.Context) error {
 		ProductID:  productID,
 	}
 
-	_, err := apiClient.PropertyAPI.NewPropertyAPICPcode(newCPcode, contractID, groupID)
+	resp, err := apiClient.PropertyAPI.NewPropertyAPICPcode(newCPcode, contractID, groupID)
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	fmt.Println("ok")
+	common.OutputJSON(resp.Body)
 
 	return nil
 }
