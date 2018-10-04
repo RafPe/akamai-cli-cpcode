@@ -1,6 +1,10 @@
 # .travis.yml
 language: go
 
+ before_install:
+  - curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+  - dep ensure
+
 # calls goreleaser
 deploy:
 - provider: script
