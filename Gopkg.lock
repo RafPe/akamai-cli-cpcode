@@ -10,12 +10,12 @@
   version = "v1.1.0"
 
 [[projects]]
-  digest = "1:f97f1cb4dcaf58645b5f11898c25945f2f777c7f1e726f9f9773d587129f4a02"
+  digest = "1:1b392c3b84b47a946778a7a8f51e8b1f80737ae0bd4ac7e30b1567ed43379706"
   name = "github.com/apiheat/go-edgegrid"
   packages = ["."]
   pruneopts = "UT"
-  revision = "8ecb9c0fe485e5134d5079c38bdbd4848ab4608a"
-  version = "v3.0.0"
+  revision = "a847ff7cc6103aef7256b83fb5ad6fc26c6b88ca"
+  version = "v3.1.0"
 
 [[projects]]
   digest = "1:b98e7574fc27ec166fb31195ec72c3bd0bffd73926d3612eb4c929bc5236f75b"
