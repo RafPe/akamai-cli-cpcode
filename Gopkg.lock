@@ -2,28 +2,28 @@
 
 
 [[projects]]
-  digest = "1:76d881212e54501b4337b4b480537ff6cd8189768fef9343d1284cb2fac71da5"
+  digest = "1:55ae67aaddde24da9d8655c974ce2070256badf8ee29a073cb3137275f2ce113"
   name = "github.com/apiheat/akamai-cli-common"
   packages = ["."]
   pruneopts = "UT"
-  revision = "1f0a3de08e818f7d591c28671d14133b995eb670"
-  version = "v1.0.0"
+  revision = "bc63d1e41f6e9feeaaf5d607aa388237053e5520"
+  version = "v1.1.0"
 
 [[projects]]
-  digest = "1:2ee5d3e6f000c5ad4e08c7d1fb689ee0fd34f1628a127ae537053f9f4f4ee28d"
+  digest = "1:f97f1cb4dcaf58645b5f11898c25945f2f777c7f1e726f9f9773d587129f4a02"
   name = "github.com/apiheat/go-edgegrid"
   packages = ["."]
   pruneopts = "UT"
-  revision = "7dbb102169fae0ebd0d939e0a29e34961735ee0b"
-  version = "v2.0.1"
+  revision = "8ecb9c0fe485e5134d5079c38bdbd4848ab4608a"
+  version = "v3.0.0"
 
 [[projects]]
-  digest = "1:5abd6a22805b1919f6a6bca0ae58b13cef1f3412812f38569978f43ef02743d4"
+  digest = "1:b98e7574fc27ec166fb31195ec72c3bd0bffd73926d3612eb4c929bc5236f75b"
   name = "github.com/go-ini/ini"
   packages = ["."]
   pruneopts = "UT"
-  revision = "5cf292cae48347c2490ac1a58fe36735fb78df7e"
-  version = "v1.38.2"
+  revision = "7b294651033cd7d9e7f0d9ffa1b75ed1e198e737"
+  version = "v1.38.3"
 
 [[projects]]
   branch = "master"
@@ -71,18 +71,18 @@
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
   pruneopts = "UT"
-  revision = "5295e8364332db77d75fce11f1d19c053919a9c9"
+  revision = "e3636079e1a4c1f337f212cc5cd2aca108f6c900"
 
 [[projects]]
   branch = "master"
-  digest = "1:6f82ed211591ecb407897ca46ff6149d618223088aecad72675804f106033629"
+  digest = "1:8375ca24f586acd7b9a0ec8c6f24a6706a3ffa3dd7a80fd0e6e51caba139408f"
   name = "golang.org/x/sys"
   packages = [
     "unix",
     "windows",
   ]
   pruneopts = "UT"
-  revision = "e4b3c5e9061176387e7cea65e4dc5853801f3fb7"
+  revision = "af653ce8b74f808d092db8ca9741fbb63d2a469d"
 
 [solve-meta]
   analyzer-name = "dep"
