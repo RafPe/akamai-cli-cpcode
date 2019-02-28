@@ -56,7 +56,7 @@ func cmdListProducts(c *cli.Context) error {
 func listProducts(c *cli.Context) error {
 	common.VerifyArgumentByName(c, "contractID")
 
-	products, _, err := apiClient.Property.ListPropertyProducts(contractID)
+	products, _, err := apiClient.Property.ListPropertyProducts(c.String("contractID"))
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -77,7 +77,7 @@ func listCPcodes(c *cli.Context) error {
 	common.VerifyArgumentByName(c, "contractID")
 	common.VerifyArgumentByName(c, "groupID")
 
-	cpcodes, _, err := apiClient.Property.ListPropertyCPCodes(contractID, groupID)
+	cpcodes, _, err := apiClient.Property.ListPropertyCPCodes(c.String("contractID"), c.String("groupID"))
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -102,11 +102,11 @@ func createCPcode(c *cli.Context) error {
 	common.VerifyArgumentByName(c, "ProductID")
 
 	newCPcode := &edgegrid.PropertyCPCodeNew{
-		CpcodeName: CPcodeName,
-		ProductID:  productID,
+		CpcodeName: c.String("CPcodeName"),
+		ProductID:  c.String("ProductID"),
 	}
 
-	resp, err := apiClient.Property.NewPropertyCPcode(newCPcode, contractID, groupID)
+	resp, err := apiClient.Property.NewPropertyCPcode(newCPcode, c.String("contractID"), c.String("groupID"))
 	if err != nil {
 		fmt.Println(err)
 	}
