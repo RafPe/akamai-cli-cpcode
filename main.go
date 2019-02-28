@@ -84,9 +84,8 @@ func main() {
 					Usage: "List associated contract products",
 					Flags: []cli.Flag{
 						cli.StringFlag{
-							Name:        "contractID",
-							Usage:       "",
-							Destination: &contractID,
+							Name:  "contractID",
+							Usage: "",
 						},
 					},
 					Action:   cmdListProducts,
@@ -97,14 +96,12 @@ func main() {
 					Usage: "List associated contract/group cpcodes",
 					Flags: []cli.Flag{
 						cli.StringFlag{
-							Name:        "contractID",
-							Usage:       "",
-							Destination: &contractID,
+							Name:  "contractID",
+							Usage: "",
 						},
 						cli.StringFlag{
-							Name:        "groupID",
-							Usage:       "",
-							Destination: &groupID,
+							Name:  "groupID",
+							Usage: "",
 						},
 					},
 					Action:   cmdListCPcodes,
