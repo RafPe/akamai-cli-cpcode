@@ -13,8 +13,6 @@ import (
 var (
 	apiClient       *edgegrid.Client
 	appName, appVer string
-
-//	groupID, contractID, CPcodeName, productID string
 )
 
 func main() {
@@ -47,24 +45,20 @@ func main() {
 			Usage: "Creates new cpcode",
 			Flags: []cli.Flag{
 				cli.StringFlag{
-					Name:        "contractID",
-					Usage:       "",
-					Destination: &contractID,
+					Name:  "contractID",
+					Usage: "",
 				},
 				cli.StringFlag{
-					Name:        "groupID",
-					Usage:       "",
-					Destination: &groupID,
+					Name:  "groupID",
+					Usage: "",
 				},
 				cli.StringFlag{
-					Name:        "ProductID",
-					Usage:       "",
-					Destination: &productID,
+					Name:  "ProductID",
+					Usage: "",
 				},
 				cli.StringFlag{
-					Name:        "CPcodeName",
-					Usage:       "",
-					Destination: &CPcodeName,
+					Name:  "CPcodeName",
+					Usage: "",
 				},
 			},
 			Action: cmdCreateCPcode,
