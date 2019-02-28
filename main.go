@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
 	common "github.com/apiheat/akamai-cli-common"
@@ -12,9 +11,10 @@ import (
 )
 
 var (
-	apiClient                                  *edgegrid.Client
-	appName, appVer                            string
-	groupID, contractID, CPcodeName, productID string
+	apiClient       *edgegrid.Client
+	appName, appVer string
+
+//	groupID, contractID, CPcodeName, productID string
 )
 
 func main() {
@@ -24,11 +24,18 @@ func main() {
 	app.Before = func(c *cli.Context) error {
 		var err error
 
-		apiClient, err = common.EdgeClientInit(c.GlobalString("config"), c.GlobalString("section"), c.GlobalString("debug"))
+		// Provide struct details needed for apiClient init
+		apiClientOpts := &edgegrid.ClientOptions{}
+		apiClientOpts.ConfigPath = c.GlobalString("config")
+		apiClientOpts.ConfigSection = c.GlobalString("section")
+		apiClientOpts.DebugLevel = c.GlobalString("debug")
+		apiClientOpts.AccountSwitchKey = c.GlobalString("ask")
+
+		apiClient, err = common.EdgeClientInit(apiClientOpts)
 
 		if err != nil {
-			fmt.Println(err)
-			os.Exit(1)
+			log.Fatalln(err)
+			return cli.NewExitError(err, 1)
 		}
 
 		return nil
